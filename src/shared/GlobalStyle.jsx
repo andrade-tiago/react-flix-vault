@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { Fonts } from "./DesignTokens";
+import { Colors, Fonts } from "./DesignTokens";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: ${Fonts.PRIMARY};
         font-size: 16px;
+        background-color: ${Colors.BLACK};
+        color: ${Colors.WHITE};
     }
 `
 

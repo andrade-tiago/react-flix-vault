@@ -1,29 +1,35 @@
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import { Text } from "./Text"
 import { Colors } from "../shared/DesignTokens"
 
-const Wrapper = styled(Link)`
-    border: 1px solid ${Colors.GRAY};
-    border-radius: 5px;
-    color: ${Colors.WHITE};
-    cursor: pointer;
-    transition: .2s;
-    padding: 5px;
-    text-decoration: none;
-    display: flex;
+const Wrapper = styled.li`
+    padding: 0;
     width: min-content;
+    cursor: pointer;
 
-    &:hover {
-        background-color: ${Colors.THEME};
-        color: ${Colors.BLACK};
+    .link {
+        text-decoration: none;
+        transition: .2s;
+        padding: 5px;
+        color: ${Colors.WHITE};
+        display: block;
+        border: 1px solid ${Colors.GRAY};
+        border-radius: 5px;
+
+        &:hover {
+            background-color: ${Colors.THEME};
+            color: ${Colors.BLACK};
+            border-color: ${Colors.THEME};
+        }
     }
 `
 
-function FilmGenreTag({text, destination}) {
+function FilmGenreTag({children, destination}) {
     return (
-        <Wrapper to={`/genero/${destination}`}>
-            <Text>{text}</Text>
+        <Wrapper>
+            <Link className="link" to={`/genero/${destination}`}>
+                {children}
+            </Link>
         </Wrapper>
     )
 }
