@@ -11,14 +11,14 @@ function Avaliation({score}) {
                 marginRight="5px">
                 <IconContext.Provider value={{
                     color: Colors.THEME,
-                    size: '20px',
+                    size: '1.5em',
                     title: 'Ícone de uma estrela'}}>
                     <FaRegStar />
                 </IconContext.Provider>
             </Box>
             <Flex alignItems="baseline">
                 <Box
-                    fontSize="24px">
+                    fontSize="1.5em">
                     {score}
                 </Box>
                 <Box>/10</Box>

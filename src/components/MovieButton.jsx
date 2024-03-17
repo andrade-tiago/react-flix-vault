@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 10px;
     border-radius: 25px;
+    width: min-content;
 `
 
 function MovieButton() {
