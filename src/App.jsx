@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import GlobalStyle from "./shared/GlobalStyle"
-import Header from "./common-components/Header"
+import Header from "./components/Header"
 
 function App() {
   return (

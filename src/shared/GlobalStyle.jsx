@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${Fonts.PRIMARY};
         font-size: 16px;
         background-color: ${Colors.BLACK};
-        color: ${Colors.WHITE};
+        color: ${Colors.LIGHT_GRAY};
     }
 `
 
