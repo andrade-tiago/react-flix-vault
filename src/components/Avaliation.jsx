@@ -11,7 +11,7 @@ function Avaliation({score}) {
                 marginRight="5px">
                 <IconContext.Provider value={{
                     color: Colors.THEME,
-                    size: '1.5em',
+                    size: '1.3em',
                     title: 'Ícone de uma estrela'}}>
                     <FaRegStar />
                 </IconContext.Provider>

@@ -4,14 +4,17 @@ import styled from "styled-components"
 import { Colors } from "../shared/DesignTokens"
 import MovieButton from "./MovieButton"
 import Avaliation from "./Avaliation"
+import { Link } from "react-router-dom"
 
-const Wrapper = styled.div`
+const LinkWrapper = styled(Link)`
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: min-content;
     transition: .2s;
     font-size: 14px;
+    color: ${Colors.LIGHT_GRAY};
+    text-decoration: none;
 
     .image {
         background-image: url(${Movie});
@@ -29,7 +32,7 @@ const Wrapper = styled.div`
         padding: 10px;
         backdrop-filter: blur(10px);
         border-radius: 10px;
-        background-color: #0007;
+        background-color: #000A;
         opacity: 0;
         transition: .2s;
         color: ${Colors.WHITE};
@@ -44,12 +47,6 @@ const Wrapper = styled.div`
         transform: translateX(-50%);
     }
 
-    .data {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     &:hover {
         transform: translateY(-5px);
 
@@ -61,11 +58,11 @@ const Wrapper = styled.div`
 
 function MovieCard() {
     return (
-        <Wrapper>
+        <LinkWrapper>
             <div className="image">
                 <div className="description">
                     <p>
-                    Em busca de uma nova esperança para a galáxia, a Aliança Rebelde enfrenta uma arriscada missão: roubar os planos que revelam uma falha na construção da Estrela da Morte. Para isso, eles contam com a ajuda de Jyn Erso ...
+                        Em busca de uma nova esperança para a galáxia, a Aliança Rebelde enfrenta uma arriscada missão: roubar os planos que revelam uma falha na construção da Estrela da Morte. Para isso, eles contam com a ajuda de Jyn Erso ...
                     </p>
 
                     <div className="button">
@@ -76,14 +73,16 @@ function MovieCard() {
 
             <h4>Rogue One: uma história...</h4>
 
-            <div className="data">
+            <Flex
+                justifyContent="space-between"
+                alignItems="center">
                 <span>2024</span>
 
                 <span>1h41</span>
 
                 <Avaliation score="9.1" />
-            </div>
-        </Wrapper>
+            </Flex>
+        </LinkWrapper>
     )
 }
 
