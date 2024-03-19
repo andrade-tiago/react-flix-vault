@@ -4,9 +4,8 @@ import styled from "styled-components"
 import { Colors } from "../shared/DesignTokens"
 import MovieButton from "./MovieButton"
 import Avaliation from "./Avaliation"
-import { Link } from "react-router-dom"
 
-const LinkWrapper = styled(Link)`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -32,12 +31,14 @@ const LinkWrapper = styled(Link)`
         padding: 10px;
         backdrop-filter: blur(10px);
         border-radius: 10px;
-        background-color: #000A;
+        background-color: #000C;
+        visibility: hidden;
         opacity: 0;
         transition: .2s;
-        color: ${Colors.WHITE};
+        color: ${Colors.LIGHT_GRAY};
         position: relative;
-        line-height: 1.3;
+        line-height: 1.35;
+        border: 1px solid #FFF3;
     }
 
     .button {
@@ -52,13 +53,14 @@ const LinkWrapper = styled(Link)`
 
         .description {
             opacity: 1;
+            visibility: visible;
         }
     }
 `
 
 function MovieCard() {
     return (
-        <LinkWrapper>
+        <Wrapper>
             <div className="image">
                 <div className="description">
                     <p>
@@ -82,7 +84,7 @@ function MovieCard() {
 
                 <Avaliation score="9.1" />
             </Flex>
-        </LinkWrapper>
+        </Wrapper>
     )
 }
 

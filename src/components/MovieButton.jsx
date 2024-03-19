@@ -2,8 +2,9 @@ import { IconContext } from "react-icons"
 import { IoPlay } from "react-icons/io5";
 import { Colors } from "../shared/DesignTokens";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const Wrapper = styled.div`
+const LinkWrapper = styled(Link)`
     text-transform: uppercase;
     color: ${Colors.BLACK};
     background-color: ${Colors.THEME};
@@ -20,12 +21,12 @@ const Wrapper = styled.div`
 
 function MovieButton() {
     return (
-        <Wrapper>
-            <IconContext.Provider value={{title: "Ícone de assistir"}}>
+        <LinkWrapper>
+            <IconContext.Provider value={{title: "Ícone de acessar"}}>
                 <IoPlay />
             </IconContext.Provider>
             Assistir
-        </Wrapper>
+        </LinkWrapper>
     )
 }
 

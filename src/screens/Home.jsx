@@ -1,3 +1,4 @@
+import Carousel from "../components/Carousel"
 import Hero from "../components/Hero"
 import MovieCard from "../components/MovieCard"
 
@@ -5,7 +6,16 @@ function Home() {
     return (
         <>
             <Hero />
-            <MovieCard />
+            <Carousel>
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+                <MovieCard />
+            </Carousel>
         </>
     )
 }
